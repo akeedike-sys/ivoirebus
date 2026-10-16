@@ -1,0 +1,68 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1f2933;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #0b3d91;
+  color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.app-nav {
+  display: flex;
+  gap: 1rem;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+.app-nav a,
+.app-user a,
+.app-user .link-button {
+  color: #dbe6ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.app-nav a.active,
+.app-user a.active {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.app-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.app-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}

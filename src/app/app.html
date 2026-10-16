@@ -1,0 +1,29 @@
+<header class="app-header">
+  <a class="brand" routerLink="/recherche">IvoireBus</a>
+
+  <nav class="app-nav">
+    <a routerLink="/recherche" routerLinkActive="active">Rechercher</a>
+    @if (auth.isAuthenticated()) {
+      <a routerLink="/reservations" routerLinkActive="active">Mes réservations</a>
+    }
+    @if (auth.isAdmin()) {
+      <a routerLink="/admin/tableau-de-bord" routerLinkActive="active">Tableau de bord</a>
+      <a routerLink="/admin/villes" routerLinkActive="active">Villes</a>
+      <a routerLink="/admin/trajets" routerLinkActive="active">Trajets</a>
+    }
+  </nav>
+
+  <div class="app-user">
+    @if (auth.currentUser(); as user) {
+      <span class="user-name">{{ user.name }}</span>
+      <button type="button" class="link-button" (click)="logout()">Déconnexion</button>
+    } @else {
+      <a routerLink="/connexion" routerLinkActive="active">Connexion</a>
+      <a routerLink="/inscription" routerLinkActive="active">Inscription</a>
+    }
+  </div>
+</header>
+
+<main class="app-main">
+  <router-outlet />
+</main>
